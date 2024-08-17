@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    flex: 1;
+}
+
+#meat {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto 20px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+#meat:hover {
+    transform: scale(1.1);
+}
+
+.shawarma {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.shawarma:hover {
+    color: rgb(179, 95, 95);
+}
+
+.shawarmassprices {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.shawarmassprices .price-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    width: 30%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shawarmassprices .price-item img {
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .shawarma {
+        font-size: 2rem;
+    }
+
+    .shawarmassprices .price-item {
+        font-size: 1.2rem;
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #meat {
+        max-width: 100%;
+    }
+
+    .shawarma {
+        font-size: 1.5rem;
+    }
+
+    .shawarmassprices .price-item {
+        width: 100%;
+    }
+}
+
+.პატარა {
+    width: 70%;
+}
+.საშუალო {
+    width: 80%;
+}
+.დიდი {
+    width: 100%;
+}
+.პატარაა:hover {
+    color: rgb(179, 95, 95);
+}
+.საშუალოო:hover {
+    color: rgb(179, 95, 95);
+}
+.დიდიი:hover {
+    color: rgb(179, 95, 95);
+}
+
+.footer {
+    position: relative; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 100%;
+}
+
+.footer iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.donate-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.donate-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.25rem;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.donate-button:active {
+    background-color: #388e3c;
+    transform: scale(0.95);
+}
+.button-container {
+    display: flex;
+    justify-content: left;
+    margin-top: 20px;
+}
+
+
+button {
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #006666;
+    transform: scale(1.1);
+}
+
+
+.message-window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    background-color: white;
+    border: 2px solid darkcyan;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+}
+
+.message-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.message-content button {
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.message-content button:hover {
+    background-color: #006666;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button-container button {
+        margin: 10px 0;
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-content {
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.game-button-container {
+    bottom: 20px;
+    left: 20px;
+    text-align: center;
+}
+
+#game-button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.5rem; 
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#game-button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+.game-description {
+    font-size: 2rem;
+    color: black;
+    margin-top: 10px;
+}
